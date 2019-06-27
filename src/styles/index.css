@@ -1,0 +1,220 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+.outline {
+    outline: 1px solid red !important;
+}
+
+.outline * {
+    outline: 1px solid red !important;
+}
+
+.table-header {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+
+.active-padding {
+    padding: 0.3rem 0.5rem;
+}
+
+@font-face {
+    font-family: "inter";
+    src: url("./assets/inter.woff") format("woff");
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: "maison";
+    src: url("./assets/maison.woff") format("woff");
+    font-display: swap;
+}
+
+
+.font-inter {
+    font-family: "inter"
+}
+
+.font-maison {
+    font-family: "maison"
+}
+
+
+
+/* styling for modal */
+
+.modal {
+    -ms-flex-align: center;
+    align-items: center;
+    display: none;
+    -ms-flex-pack: center;
+    justify-content: center;
+    overflow: hidden;
+    position: fixed;
+    z-index: 40
+}
+
+.modal.is-active {
+    display: -ms-flexbox;
+    display: flex
+}
+
+.modal-background {
+    background-color: rgba(10, 10, 10, .86)
+}
+
+
+.img {
+    box-shadow: inset 0 0 0 1px hsla(0, 0%, 0%, 0.1)
+}
+
+.modal-card,
+.modal-content {
+    margin: 0 20px;
+    max-height: calc(100vh - 160px);
+    overflow: auto;
+    position: relative;
+    width: 100%
+}
+
+.modal-close:active {
+    background-color: rgba(10, 10, 10, .4)
+}
+
+.modal,
+.modal-background {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0
+}
+
+
+.review-modal .modal-content {
+    width: 480px;
+}
+
+.review-modal .modal-content .modal-delete {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-left: auto
+}
+
+.review-modal .modal-content .modal-delete svg {
+    width: 30px;
+    height: 30px;
+    stroke: #999;
+    cursor: pointer
+}
+
+.review-modal .modal-content .modal-delete svg:hover {
+    stroke: #0023ff
+}
+
+.review-modal .modal-content .box {
+    padding: 0;
+    overflow: hidden;
+    transition: all .4s;
+    -webkit-transform: scale(0);
+    transform: scale(0)
+}
+
+.review-modal .modal-content .box .box-header {
+    width: 100%;
+    background: #ededed;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 10px 20px
+}
+
+.review-modal .modal-content .box .box-header img {
+    width: 30px;
+    height: 30px;
+    border-radius: 3px;
+}
+
+.review-modal .modal-content .box .box-header span {
+    display: block;
+    padding-left: 10px;
+    color: #4a4a4a
+}
+
+.review-modal .modal-content .box .box-header .delete {
+    margin-left: auto
+}
+
+.review-modal .modal-content .box .box-body {
+    padding: 20px
+}
+
+.review-modal .modal-content .box p {
+    font-size: 85%;
+    color: #999
+}
+
+.review-modal .modal-content fieldset,
+.review-modal .modal-content label {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    z-index: 99
+}
+
+.review-modal .modal-content .rating {
+    border: none;
+    float: left
+}
+
+.review-modal .modal-content .rating>input {
+    display: none
+}
+
+.review-modal .modal-content .rating>label:before {
+    margin: 5px;
+    font-size: 1.25em;
+    font-family: FontAwesome;
+    display: inline-block;
+    content: "\f005"
+}
+
+.review-modal .modal-content .rating>.half:before {
+    content: "\f089";
+    position: absolute
+}
+
+.review-modal .modal-content .rating>label {
+    color: #ddd;
+    float: right
+}
+
+.review-modal .modal-content .rating>input:checked~label,
+.review-modal .modal-content .rating:not(:checked)>label:hover,
+.review-modal .modal-content .rating:not(:checked)>label:hover~label {
+    color: #FFD700 !important
+}
+
+.review-modal .modal-content .rating>input:checked+label:hover,
+.review-modal .modal-content .rating>input:checked~label:hover,
+.review-modal .modal-content .rating>label:hover~input:checked~label,
+.review-modal .modal-content .rating>input:checked~label:hover~label {
+    color: #FFED85 !important
+}
+
+.review-modal.is-active .box {
+    -webkit-transform: scale(1);
+    transform: scale(1)
+}

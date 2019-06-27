@@ -1,0 +1,35 @@
+{
+  "name": "dave",
+  "version": "1.0.0",
+  "description": "a waste managment app",
+  "author": "casprine <casprine.001@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "autoprefixer": "^9.5.1",
+    "eslint": "^5.16.0",
+    "eslint-config-google": "^0.12.0",
+    "postcss-cli": "^6.1.2",
+    "react-scripts": "1.1.4",
+    "tailwindcss": "^1.0.1"
+  },
+  "dependencies": {
+    "@fullhuman/postcss-purgecss": "^1.2.0",
+    "axios": "^0.18.0",
+    "cssnano": "^4.1.10",
+    "prop-types": "^15.6.2",
+    "react": "16.8.4",
+    "react-app-rewired": "1.5.2",
+    "react-dom": "16.8.4",
+    "react-hot-loader": "^4.6.3",
+    "react-router-dom": "^4.3.1"
+  },
+  "scripts": {
+    "build:css": "NODE_ENV=production postcss src/styles/index.css -o src/index.css",
+    "watch:css": " postcss src/styles/index.css -o src/index.css -w",
+    "start": "yarn watch:css & react-app-rewired start",
+    "build": "yarn build:css & react-app-rewired build",
+    "test": "react-app-rewired test --env=jsdom",
+    "lint:css": "stylelint './src/**/*.js'"
+  }
+}
